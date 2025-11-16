@@ -32,7 +32,7 @@ export default function AdvancedServiceSection() {
 
   return (
     <section className="bg-white md:py-20">
-      <div className="container mx-22 my-12 py-12 bg-gray-200 rounded-2xl">
+      <div className="mx:auto mx-22 my-12 py-12 bg-gray-200 rounded-2xl">
         <div className="gap-8 mb-12 mx-16">
           <span className="inline-block bg-lime-100 text-lime-800 text-sm font-semibold px-4 py-1 rounded-full">
             SERVICE
