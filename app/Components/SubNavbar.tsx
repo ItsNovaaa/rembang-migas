@@ -84,8 +84,9 @@ export default function SubNavbar() {
 
       {/* Sisi Kanan: Tombol Aksi (Desktop) */}
       <div className="hidden md:flex items-center gap-2">
-        <Button className="bg-white text-black font-semibold hover:bg-gray-200 rounded-full">
+        <Button className="bg-secondary text-white font-semibold hover:bg-primary rounded-full">
           Contact Us
+          <ArrowRight className="w-4 h-4 ml-2" />
         </Button>
       </div>
 
@@ -118,14 +119,8 @@ export default function SubNavbar() {
               ))}
             </nav>
             <div className="flex flex-col gap-4 mt-8">
-              <Button className="bg-white text-black font-semibold hover:bg-gray-200 w-full">
+              <Button className="bg-primary text-black font-semibold hover:bg-primary w-full">
                 Contact Us
-              </Button>
-              <Button
-                variant="ghost"
-                className="text-white font-semibold hover:bg-white/10 hover:text-white w-full border border-white/20"
-              >
-                Registration
               </Button>
             </div>
           </SheetContent>
