@@ -23,7 +23,7 @@ export default function StrategyHero() {
         {/* A. Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/max.jpg" // Ganti dengan gambar pabrik/gedung Anda
+            src="/produk-banner.png" // Ganti dengan gambar pabrik/gedung Anda
             alt="Fasilitas Pabrik"
             fill
             className="object-cover object-center" // object-center agar fokus gambar di tengah

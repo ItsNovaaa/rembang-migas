@@ -100,7 +100,7 @@ export default function SubNavbar() {
       {/* Sisi Kanan: Tombol Aksi (Desktop) */}
       <div className="hidden md:flex items-center gap-2">
         <Button className="bg-secondary text-white font-semibold hover:bg-primary rounded-full">
-          Contact Us
+          Hubungi Kami
           <ArrowRight className="w-4 h-4 ml-2" />
         </Button>
       </div>
@@ -135,7 +135,7 @@ export default function SubNavbar() {
             </nav>
             <div className="flex flex-col gap-4 mt-8">
               <Button className="bg-primary text-black font-semibold hover:bg-primary w-full">
-                Contact Us
+                Hubungi Kami
               </Button>
             </div>
           </SheetContent>

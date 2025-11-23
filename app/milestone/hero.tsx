@@ -12,7 +12,7 @@ export default function Hero() {
         {/* A. Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/max.jpg" // Ganti dengan gambar pabrik/gedung Anda
+            src="/milestone-banner.png" // Ganti dengan gambar pabrik/gedung Anda
             alt="Fasilitas Pabrik"
             fill
             className="object-cover object-center" // object-center agar fokus gambar di tengah
@@ -28,7 +28,7 @@ export default function Hero() {
         <div className="relative z-20 h-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col justify-center">
           {/* Judul Besar */}
           <h1 className="text-4xl md:text-3xl lg:text-6xl font-bold text-white tracking-wide uppercase drop-shadow-lg">
-            Produk Kami
+            Pencapaian Kami
           </h1>
 
           {/* Breadcrumb (Posisi Kiri Bawah) */}

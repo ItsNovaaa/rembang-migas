@@ -12,10 +12,13 @@ export default function OurStory() {
     <section className="py-20 px-6 md:px-12 max-w-5xl mx-auto">
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-primary mb-3">
-          Our Story
+          Cerita Kami
         </h2>
         <p className="text-gray-600 text-lg">
           Discover our journey, our values, and what drives us forward.
+          {/* translate ke bahasa indonesia Discover our journey, our values, and what drives us forward. */}
+          Cari Tahu Tentang Kami, Niat Kami, dan apa yang kami ingin berusaha.
+          
         </p>
       </div>
 
