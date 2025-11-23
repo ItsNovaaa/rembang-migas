@@ -13,19 +13,13 @@ export default function Hero() {
     <section>
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-4 pt-20 pb-40">
         <h1 className="text-5xl md:text-6xl lg:text-5xl font-bold max-w-5xl">
-          Energi yang Lahir dari Bumi <br /> Rembang, Digerakkan Manusia, dan Diberkahi
-          oleh Doa{" "}
+          Energi yang Lahir dari Bumi <br /> Rembang, Digerakkan Manusia, dan
+          Diberkahi oleh Doa{" "}
         </h1>
         <p className="mt-4 text-lg md:text-xl max-w-2xl text-gray-200">
-          Temukan cara luar biasa energi surya dapat mengubah rumah atau bisnis Anda.
+          Temukan cara luar biasa energi surya dapat mengubah rumah atau bisnis
+          Anda.
         </p>
-        <Button
-          size="lg"
-          className="mt-8 bg-secondary text-white hover:bg-primary text-lg px-8 py-7 rounded-full"
-        >
-          Dapatkan Penawaran Gratis
-          <ArrowRight className="w-5 h-5" />
-        </Button>
       </div>
 
       {/* 4. Komponen Info Cards */}

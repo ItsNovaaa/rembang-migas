@@ -9,8 +9,8 @@ const rubik = Rubik({ subsets: ["latin"] })
 // const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "TechCorp - Digital Transformation Solutions",
-  description: "Enterprise technology solutions for digital transformation, cloud services, and business innovation.",
+  title: "Rembang Migas Energi",
+  description: "Solusi Mineral dan Energi",
   generator: "v0.app",
 }
 
