@@ -44,7 +44,7 @@ export default function HomePage() {
       <main className="relative min-h-screen text-white">
         {/* 1. Gambar Latar Belakang */}
         <Image
-          src="/max.jpg" 
+          src="/pertambangan.png" 
           alt="Pemandangan kincir angin"
           fill
           className="object-cover -z-10"

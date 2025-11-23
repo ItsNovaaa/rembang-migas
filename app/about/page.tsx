@@ -19,7 +19,7 @@ export default function AboutUs() {
 
       {/* 2. Main Content Wrapper */}
       {/* PENTING: 'pt-[80px]' atau 'pt-20' memberikan jarak agar konten tidak tertutup Navbar Fixed */}
-      <main className="flex-grow pt-20"> 
+      <main className="flex-grow"> 
         
         {/* HERO SECTION */}
         <Hero />

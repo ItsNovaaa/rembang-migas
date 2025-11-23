@@ -4,7 +4,7 @@ import { ArrowRight, Star } from "lucide-react";
 
 export default function AboutUsSection() {
   return (
-    <section className="bg-white text-gray-900 py-36 md:py-28">
+    <section className="bg-white text-gray-900 py-36c:\Users\Novari\Downloads\ASSETS__-05.png md:py-28"  >
       <div className="container mx-auto px-4">
         {/* 1. Tata Letak Section Utama (Grid) */}
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mx-12 items-center">
@@ -41,21 +41,21 @@ export default function AboutUsSection() {
               {/* Stacked Avatars */}
               <div className="flex items-center -space-x-3">
                 <img
-                  src="/avatar1.jpg"
+                  src="/people__1.png"
                   alt="Reviewer 1"
                   width="40"
                   height="40"
                   className="rounded-full border-2 border-white w-10 h-10 object-cover"
                 />
                 <img
-                  src="/avatar1.jpg"
+                  src="/people__1.png"
                   alt="Reviewer 2"
                   width="40"
                   height="40"
                   className="rounded-full border-2 border-white w-10 h-10 object-cover"
                 />
                 <img
-                  src="/avatar1.jpg"
+                  src="/people__1.png"
                   alt="Reviewer 3"
                   width="40"
                   height="40"
@@ -76,19 +76,20 @@ export default function AboutUsSection() {
           </div>
 
           {/* 3. Kolom Tengah & Kanan (Gambar + Kartu Overlap) */}
-          <div className="lg:col-span-2 pl-8 ml-16 relative">
+          <div className="lg:col-span-2 pl-12 ml-28 relative">
             <div className="grid grid-cols-2 lg:grid-cols-2 gap-8 items-center">
               {/* Gambar */}
-              <div className="relative z-0 lg:ml-12 w-full">
+              <div className="relative z-0 lg:ml-8 w-full">
                 <img
-                  src="/1.jpg"
+                  src="/about-us.png"
                   alt="Pekerja Green Power dengan panel surya"
-                  className="rounded-2xl object-cover w-full h-auto max-h-[500px]"
+                  className="rounded-2xl object-cover w-full h-auto max-h-[700px]"
                 />
+                <div className="absolute inset-0 bg-black/10 rounded-2xl"/>
               </div>
 
               {/* Kartu Statistik (Overlap) */}
-              <div className="flex flex-col gap-6 lg:-ml-24 relative z-10">
+              <div className="flex flex-col gap-6 lg:-ml-16 relative z-10">
                 {/* Kartu 1: Success */}
                 <Card className="bg-white border-gray-200 rounded-2xl shadow-lg p-6 w-100">
                   <CardContent className="p-0">

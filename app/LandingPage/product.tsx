@@ -19,7 +19,7 @@ const services = [
     id: "produk-energi",
     title: "Produk Energi",
     subtitle: "Solusi Energi Terbarukan",
-    imageSrc: "/max.jpg", // Pastikan path ini benar
+    imageSrc: "/bbm.jpg", // Pastikan path ini benar
     description:
       "Kami menyediakan berbagai produk energi yang efisien dan ramah lingkungan untuk kebutuhan industri maupun komersial.",
     details:
@@ -29,7 +29,7 @@ const services = [
     id: "perdagangan-mineral",
     title: "Perdagangan Mineral",
     subtitle: "Sustainable Mining Trading",
-    imageSrc: "/max.jpg",
+    imageSrc: "/perdagangan-mineral.jpeg",
     description:
       "Layanan perdagangan mineral yang transparan dan berkelanjutan, menghubungkan sumber daya alam dengan kebutuhan pasar global.",
     details:
@@ -39,7 +39,7 @@ const services = [
     id: "layanan-penunjang",
     title: "Layanan Penunjang",
     subtitle: "Support & Maintenance",
-    imageSrc: "/max.jpg",
+    imageSrc: "/layanan-penunjang.jpg",
     description:
       "Dukungan teknis dan operasional menyeluruh untuk memastikan infrastruktur energi Anda berjalan optimal.",
     details:

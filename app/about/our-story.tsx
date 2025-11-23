@@ -107,7 +107,9 @@ export default function OurStory() {
           className="w-full mt-8 animate-in fade-in slide-in-from-left-8 duration-500 ease-out"
         >
           <div className="bg-slate-50/80 p-8 md:p-12 rounded-lg border border-slate-100 shadow-sm text-center h-[300px] flex items-center justify-center">
-            <p className="text-gray-500 italic">
+            
+            <p className="text-gray-500">
+              <span className="font-bold text-xl"> PT Rembang Migas Energi (Perseroda) <br /><br /></span>
               PT Rembang Migas Energi (Perseroda) adalah Badan Usaha Milik
               Daerah (BUMD) yang didirikan berdasarkan kesepakatan antara
               Pemerintah Kabupaten Rembang dan Dewan Perwakilan Rakyat Daerah

@@ -10,7 +10,7 @@ export default function NewsPage() {
     <section>
       <Navbar />
 
-      <main className="flex-grow pt-20">
+      <main className="flex-grow">
         {/* Produk Section */}
         <BeritaHero />
         <Berita />

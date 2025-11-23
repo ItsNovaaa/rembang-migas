@@ -27,17 +27,17 @@ export default function SubNavbar() {
 
   const navItems = [
     {
-      title: "Home",
+      title: "Beranda",
       href: "/",
       icon: Sparkles,
     },
     {
-      title: "About",
+      title: "Tentang Kami",
       href: "/about",
       icon: Leaf,
     },
     {
-      title: "Product",
+      title: "Produk",
       href: "/produk",
       icon: Sparkles,
     },
@@ -47,26 +47,41 @@ export default function SubNavbar() {
       icon: Sparkles,
     },
     {
-      title: "Milestone",
+      title: "Pencapaian",
       href: "/milestone",
       icon: Sparkles,
-    }
+    },
   ];
 
 
   return (
     <header
       // 4. Dynamic ClassName based on isScrolled state
-      className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 md:px-8 lg:px-12 transition-all duration-300 ease-in-out ${
+      className={` py-2 flex items-center justify-between px-4 md:px-8 lg:px-12 transition-all duration-300 ease-in-out ${
         isScrolled
-          ? "bg-white/50 backdrop-blur-md shadow-lg p-3" // Style when scrolled
-          : "bg-transparent p-5" // Style when at top
+          ? "bg-white/50 backdrop-blur-md shadow-lg" // Style when scrolled
+          : "bg-transparent items-center" // Style when at top
       }`}
     >
       {/* Sisi Kiri: Logo */}
       <Link href="/" className="flex items-center gap-2">
-        <Leaf className="text-green-400 w-7 h-7" />
-        <span className="text-2xl font-bold text-black">Green Power</span>
+        {isScrolled ? (
+          <Image
+            src="/logo-color.png"
+            alt="Green Power Logo"
+            width={300}
+            height={100}
+            className=""
+          />
+        ) : (
+          <Image
+            src="/logo-color.png"
+            alt="Green Power Logo"
+            width={300}
+            height={100}
+            className=""
+          />
+        )}
       </Link>
 
       {/* Sisi Tengah: Navigasi (Desktop) */}

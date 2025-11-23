@@ -8,9 +8,9 @@ import AdvancedServiceCard, { ServiceItemData } from "./service-card";
 const servicesData: ServiceItemData[] = [
   {
     id: "residential-solar",
-    title: "Residential Solar",
+    title: "Hulu Dan Hilir Minyak dan Gas Bumi",
     subtitle: "Energi Rumah Mandiri",
-    thumbnail: "/max.jpg", // Gambar Kartu Depan
+    thumbnail: "/hulu-hilir-migas.jpg", // Gambar Kartu Depan
     content: {
       overview: {
         label: "Overview",
@@ -36,9 +36,9 @@ const servicesData: ServiceItemData[] = [
   },
   {
     id: "hydropower-system",
-    title: "Hydropower System",
+    title: "Energi Dan Mineral Lainnya",
     subtitle: "Pembangkit Listrik Tenaga Air",
-    thumbnail: "/max.jpg",
+    thumbnail: "/energy-dan-mineral.jpg",
     content: {
       overview: {
         label: "Overview",
@@ -63,10 +63,10 @@ const servicesData: ServiceItemData[] = [
     }
   },
   {
-    id: "wind-turbine",
-    title: "Wind Turbine",
+    id: "Jasa-Penunjang",
+    title: "Jasa Penunjang",
     subtitle: "Tenaga Angin Efisien",
-    thumbnail: "/max.jpg",
+    thumbnail: "/jasa-penunjang.png",
     content: {
       overview: {
         label: "Overview",

@@ -15,7 +15,7 @@ export default function RuangLingkup() {
       <Navbar />
 
       {/* 2. Main Content Wrapper */}
-      <main className="flex-grow pt-20">
+      <main className="flex-grow">
         {/* Produk Section */}
         <Hero />
 

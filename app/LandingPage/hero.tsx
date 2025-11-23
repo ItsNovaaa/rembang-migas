@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -11,78 +11,79 @@ import Navbar from "../Components/Navbar";
 export default function Hero() {
   return (
     <section>
-    <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-4 pt-20 pb-40">
-          <h1 className="text-4xl md:text-6xl lg:text-5xl font-bold max-w-4xl">
-            Creating a Sustainable Future with Renewable Energy Solutions.
-          </h1>
-          <p className="mt-4 text-lg md:text-xl max-w-2xl text-gray-200">
-            Discover the amazing ways solar energy can transform your home or
-            business.
-          </p>
-          <Button
-            size="lg"
-            className="mt-8 bg-secondary text-white hover:bg-primary text-lg px-8 py-7 rounded-full"
-          >
-            <ArrowRight className="w-5 h-5 mr-2" />
-            Get A Free Quote
-          </Button>
-        </div>
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-4 pt-20 pb-40">
+        <h1 className="text-4xl md:text-6xl lg:text-5xl font-bold max-w-5xl">
+          Energi yang Lahir dari Bumi <br /> Rembang, Digerakkan Manusia, dan Diberkahi
+          oleh Doa{" "}
+        </h1>
+        <p className="mt-4 text-lg md:text-xl max-w-2xl text-gray-200">
+          Discover the amazing ways solar energy can transform your home or
+          business.
+        </p>
+        <Button
+          size="lg"
+          className="mt-8 bg-secondary text-white hover:bg-primary text-lg px-8 py-7 rounded-full"
+        >
+          Get A Free Quote
+          <ArrowRight className="w-5 h-5" />
+        </Button>
+      </div>
 
-        {/* 4. Komponen Info Cards */}
-        <div className="absolute z-20 bottom-10 left-0 right-0 w-full max-w-xl mx-auto px-4">
-          <div className="flex flex-col md:flex-row gap-4">
-            {/* Card 1: Alternative Energy */}
-            <Card className="flex-1 grow-2 bg-white/5 backdrop-blur-md border-white/20 text-white">
-              <CardContent className="p-4 flex items-center gap-4">
-                <Image
-                  src="/1.jpg" // GANTI DENGAN PATH GAMBAR ANDA
-                  alt="Pekerja panel surya"
-                  width={80}
-                  height={80}
-                  className="rounded-md object-cover h-20 w-20"
-                />
-                <div>
-                  <h3 className="font-bold text-lg">Alternative Energy</h3>
-                  <p className="text-sm text-gray-200">
-                    Discover the amazing ways solar energy can transform.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+      {/* 4. Komponen Info Cards */}
+      <div className="absolute z-20 bottom-10 left-0 right-0 w-full max-w-xl mx-auto px-4 pb-20">
+        <div className="flex flex-col md:flex-row gap-4">
+          {/* Card 1: Alternative Energy */}
+          <Card className="flex-1 grow-2 bg-white/5 backdrop-blur-md border-white/20 text-white">
+            <CardContent className="p-4 flex items-center gap-4">
+              <Image
+                src="/1.jpg" // GANTI DENGAN PATH GAMBAR ANDA
+                alt="Pekerja panel surya"
+                width={80}
+                height={80}
+                className="rounded-md object-cover h-20 w-20"
+              />
+              <div>
+                <h3 className="font-bold text-lg">Alternative Energy</h3>
+                <p className="text-sm text-gray-200">
+                  Discover the amazing ways solar energy can transform.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
 
-            {/* Card 2: Social Proof */}
-            <Card className="flex-1 bg-white/5 backdrop-blur-md border-white/20 text-white">
-              <CardContent className="p-4 flex  items-center justify-between gap-4">
-                <div className="justify-center items-center gap-4">
-                  {/* Stacked Avatars */}
-                  <div className="flex -space-x-4">
-                    <Image
-                      src="/avatar1.jpg" // GANTI DENGAN PATH GAMBAR ANDA
-                      alt="Client 1"
-                      width={40}
-                      height={40}
-                      className="rounded-full border-2 border-white/50"
-                    />
-                    <Image
-                      src="/avatar1.jpg" // GANTI DENGAN PATH GAMBAR ANDA
-                      alt="Client 2"
-                      width={40}
-                      height={40}
-                      className="rounded-full border-2 border-white/50"
-                    />
-                    <div className="w-10 h-10 rounded-full bg-gray-600 flex items-center justify-center text-xs font-bold border-2 border-white/50">
-                      80+
-                    </div>
+          {/* Card 2: Social Proof */}
+          <Card className="flex-1 bg-white/5 backdrop-blur-md border-white/20 text-white">
+            <CardContent className="p-4 flex  items-center justify-between gap-4">
+              <div className="justify-center items-center gap-4">
+                {/* Stacked Avatars */}
+                <div className="flex -space-x-4">
+                  <Image
+                    src="/avatar1.jpg" // GANTI DENGAN PATH GAMBAR ANDA
+                    alt="Client 1"
+                    width={40}
+                    height={40}
+                    className="rounded-full border-2 border-white/50"
+                  />
+                  <Image
+                    src="/avatar1.jpg" // GANTI DENGAN PATH GAMBAR ANDA
+                    alt="Client 2"
+                    width={40}
+                    height={40}
+                    className="rounded-full border-2 border-white/50"
+                  />
+                  <div className="w-10 h-10 rounded-full bg-gray-600 flex items-center justify-center text-xs font-bold border-2 border-white/50">
+                    80+
                   </div>
-                  <p className="text-sm">
-                    Our 200+ satisfied clients world wide.
-                  </p>
                 </div>
-                {/* <Sparkles className="text-green-400 w-8 h-8 flex-shrink-0" /> */}
-              </CardContent>
-            </Card>
-          </div>
+                <p className="text-sm">
+                  Our 200+ satisfied clients world wide.
+                </p>
+              </div>
+              {/* <Sparkles className="text-green-400 w-8 h-8 flex-shrink-0" /> */}
+            </CardContent>
+          </Card>
         </div>
-        </section>
+      </div>
+    </section>
   );
 }
