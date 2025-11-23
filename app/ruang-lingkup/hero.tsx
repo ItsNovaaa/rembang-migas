@@ -41,6 +41,9 @@ export default function StrategyHero() {
           <h1 className="text-4xl md:text-3xl lg:text-5xl font-bold text-white tracking-wide uppercase drop-shadow-lg">
             Ruang Lingkup
           </h1>
+          <p className="mt-4 text-lg md:text-xl max-w-2xl text-gray-200">
+            Timpa teks nya disini aja
+          </p>
 
           {/* Breadcrumb (Posisi Kiri Bawah) */}
           <div className="absolute bottom-10 left-6 md:left-12 flex items-center gap-2 text-gray-300 text-sm font-medium">
