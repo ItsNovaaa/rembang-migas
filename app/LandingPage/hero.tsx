@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <section>
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-4 pt-20 pb-40">
-        <h1 className="text-4xl md:text-6xl lg:text-5xl font-bold max-w-5xl">
+        <h1 className="text-5xl md:text-6xl lg:text-5xl font-bold max-w-5xl">
           Energi yang Lahir dari Bumi <br /> Rembang, Digerakkan Manusia, dan Diberkahi
           oleh Doa{" "}
         </h1>
