@@ -4,10 +4,10 @@ import { ArrowRight, Star } from "lucide-react";
 
 export default function AboutUsSection() {
   return (
-    <section className="bg-white text-gray-900 py-36 md:py-28"  >
+    <section className="bg-[#f2fcfc] text-gray-900 py-36 md:py-28"  >
       <div className="container mx-auto px-4">
         {/* 1. Tata Letak Section Utama (Grid) */}
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mx-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mx-4 md:mx-8 lg:mx-12 items-center">
 
           {/* 2. Kolom Kiri (Konten Teks) */}
           <div className="lg:col-span-1 ">
@@ -17,7 +17,7 @@ export default function AboutUsSection() {
             </span>
 
             {/* Judul */}
-            <h2 className="text-4xl font-bold text-black mt-4">
+            <h2 className="text-4xl font-bold text-primary mt-4">
               The Green Power
             </h2>
 
@@ -76,14 +76,14 @@ export default function AboutUsSection() {
           </div>
 
           {/* 3. Kolom Tengah & Kanan (Gambar + Kartu Overlap) */}
-          <div className="lg:col-span-2 pl-12 ml-28 relative">
-            <div className="grid grid-cols-2 lg:grid-cols-2 gap-8 items-center">
+          <div className="lg:col-span-2 pl-0 lg:pl-12 ml-0 lg:ml-28 relative">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               {/* Gambar */}
               <div className="relative z-0 lg:ml-8 w-full">
                 <img
                   src="/about-us.png"
                   alt="Pekerja Green Power dengan panel surya"
-                  className="rounded-2xl object-cover w-full h-auto max-h-[700px]"
+                  className="rounded-2xl object-cover w-full h-auto max-h-[400px] md:max-h-[700px]"
                 />
                 <div className="absolute inset-0 bg-black/10 rounded-2xl" />
               </div>
@@ -91,13 +91,13 @@ export default function AboutUsSection() {
               {/* Kartu Statistik (Overlap) */}
               <div className="flex flex-col gap-6 lg:-ml-16 relative z-10">
                 {/* Kartu 1: Success */}
-                <Card className="bg-white border-gray-200 rounded-2xl shadow-lg p-6 w-100">
+                <Card className="bg-white border-gray-200 rounded-2xl shadow-lg p-4 md:p-6 w-full">
                   <CardContent className="p-0">
                     <div className="flex items-baseline gap-2">
-                      <span className="text-5xl font-bold text-gray-900">87%</span>
-                      <span className="text-lg text-gray-700">Sukses</span>
+                      <span className="text-3xl md:text-5xl font-bold text-primary">87%</span>
+                      <span className="text-lg text-primary">Sukses</span>
                     </div>
-                    <p className="text-gray-600 mt-3">
+                    <p className="text-gray-600 mt-3 text-sm md:text-base">
                       Green Power berdedikasi untuk memberdayakan individu dan
                       bisnis dengan energi bersih dan terbarukan. Kami berusaha untuk membuat
                       energi surya dapat diakses dan terjangkau bagi semua.
@@ -106,13 +106,13 @@ export default function AboutUsSection() {
                 </Card>
 
                 {/* Kartu 2: Experience */}
-                <Card className="bg-white border-gray-200 rounded-2xl shadow-lg p-6 w-100">
+                <Card className="bg-white border-gray-200 rounded-2xl shadow-lg p-4 md:p-6 w-full">
                   <CardContent className="p-0">
                     <div className="flex items-baseline gap-2">
-                      <span className="text-5xl font-bold text-gray-900">05+</span>
+                      <span className="text-3xl md:text-5xl font-bold text-gray-900">05+</span>
                       <span className="text-lg text-gray-700">Pengalaman</span>
                     </div>
-                    <p className="text-gray-600 mt-3">
+                    <p className="text-gray-600 mt-3 text-sm md:text-base">
                       Visi kami adalah menjadi pemimpin global dalam solusi energi
                       berkelanjutan, menciptakan masa depan yang lebih cerah dan bersih bagi
                       generasi mendatang.

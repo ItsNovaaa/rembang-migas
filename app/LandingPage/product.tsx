@@ -49,7 +49,7 @@ const services = [
 
 export default function ServiceSection() {
   return (
-    <section className="bg-white text-gray-900 py-16 md:py-20">
+    <section className="bg-[#f2fcfc] text-gray-900 py-16 md:py-20">
       <div className="container mx-auto px-4 md:px-8">
 
         {/* --- AREA HEADER --- */}

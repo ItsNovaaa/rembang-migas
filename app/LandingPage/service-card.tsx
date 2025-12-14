@@ -152,9 +152,9 @@ export default function AdvancedServiceCard({ item }: { item: ServiceItemData })
 
           {/* 4. Tombol Sudut (Styling) */}
           <div
-            className="absolute bottom-0 right-0 w-24 h-22 bg-white z-10 rounded-tl-[3.5rem] flex items-center justify-center
+            className="absolute bottom-0 right-0 w-24 h-22 bg-[#f2fcfc] z-10 rounded-tl-[3.5rem] flex items-center justify-center
                        before:content-[''] before:absolute before:-top-12 before:right-0
-                       before:w-11 before:h-14
+                       before:w-11 before:h-14 
                        before:bg-[radial-gradient(circle_at_0_0,_transparent_3rem,_white_3rem)]
                        after:content-[''] after:absolute after:bottom-0 after:-left-12
                        after:w-17 after:h-10

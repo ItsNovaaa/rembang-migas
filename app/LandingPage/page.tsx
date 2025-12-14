@@ -61,10 +61,10 @@ export default function HomePage() {
       </main>
       <AboutUs />
       <Product />
+      <Berita />
       <Service />
       <Benefit />
-      <Marquee />
-      <Berita />
+      {/* <Marquee /> */}
       <WorkWithUs />
       <Footer />
 

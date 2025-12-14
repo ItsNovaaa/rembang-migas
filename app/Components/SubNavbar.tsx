@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"; // 1. Import hooks
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 import { ArrowRight, Leaf, Menu, Sparkles } from "lucide-react";
 
 export default function SubNavbar() {
@@ -57,11 +57,10 @@ export default function SubNavbar() {
   return (
     <header
       // 4. Dynamic ClassName based on isScrolled state
-      className={` py-2 flex items-center justify-between px-4 md:px-8 lg:px-12 transition-all duration-300 ease-in-out ${
-        isScrolled
-          ? "bg-white/50 backdrop-blur-md shadow-lg" // Style when scrolled
-          : "bg-transparent items-center" // Style when at top
-      }`}
+      className={` py-2 flex items-center justify-between px-4 md:px-8 lg:px-12 transition-all duration-300 ease-in-out ${isScrolled
+        ? "bg-white/50 backdrop-blur-md shadow-lg" // Style when scrolled
+        : "bg-transparent items-center" // Style when at top
+        }`}
     >
       {/* Sisi Kiri: Logo */}
       <Link href="/" className="flex items-center gap-2">
@@ -71,7 +70,7 @@ export default function SubNavbar() {
             alt="Green Power Logo"
             width={300}
             height={100}
-            className=""
+            className="w-[150px] md:w-[200px] lg:w-[300px]"
           />
         ) : (
           <Image
@@ -79,7 +78,7 @@ export default function SubNavbar() {
             alt="Green Power Logo"
             width={300}
             height={100}
-            className=""
+            className="w-[150px] md:w-[200px] lg:w-[300px]"
           />
         )}
       </Link>
@@ -112,29 +111,30 @@ export default function SubNavbar() {
             <Button
               variant="ghost"
               size="icon"
-              className="text-white hover:bg-white/10 hover:text-white"
+              className="text-black hover:bg-black/10 hover:text-black"
             >
               <Menu className="h-6 w-6" />
             </Button>
           </SheetTrigger>
           <SheetContent
             side="right"
-            className="bg-gray-900/95 text-white border-l-white/20 backdrop-blur-md"
+            className="bg-gray-900/95 text-white border-l-white/20 backdrop-blur-md p-6"
           >
+            <SheetTitle className="sr-only">Menu Navigasi</SheetTitle>
             <nav className="flex flex-col gap-6 mt-8">
               {/* Using the map here too so mobile matches desktop */}
               {navItems.map((item, index) => (
-                <Link 
-                  key={index} 
-                  href={item.href} 
-                  className="font-semibold text-white hover:text-green-400 text-lg"
+                <Link
+                  key={index}
+                  href={item.href}
+                  className="font-semibold text-white hover:text-secondary text-lg"
                 >
                   {item.title}
                 </Link>
               ))}
             </nav>
-            <div className="flex flex-col gap-4 mt-8">
-              <Button className="bg-primary text-black font-semibold hover:bg-primary w-full">
+            <div className="flex flex-col gap-4 mt-auto pt-8">
+              <Button className="bg-secondary text-white font-semibold hover:bg-primary w-full rounded-full py-6">
                 Hubungi Kami
               </Button>
             </div>

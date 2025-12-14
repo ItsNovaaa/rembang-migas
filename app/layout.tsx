@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${rubik.className} font-sans antialiased bg-white` }>
+      <body className={`${rubik.className} font-sans antialiased bg-[#f2fcfc] text-gray-900`}>
         {children}
         <Analytics />
       </body>

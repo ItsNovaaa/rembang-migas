@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"; // 1. Import hooks
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 import { ArrowRight, Leaf, Menu, Sparkles } from "lucide-react";
 
 export default function Navbar() {
@@ -58,8 +58,8 @@ export default function Navbar() {
     <header
       // 4. Dynamic ClassName based on isScrolled state
       className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 md:px-8 lg:px-12 transition-all duration-300 ease-in-out ${isScrolled
-          ? "bg-white/80 backdrop-blur-md shadow-lg p-3" // UPDATED: Tambahkan bg-white/80 agar teks hitam terlihat jelas
-          : "bg-transparent"
+        ? "bg-white/80 backdrop-blur-md shadow-lg p-3" // UPDATED: Tambahkan bg-white/80 agar teks hitam terlihat jelas
+        : "bg-transparent"
         }`}
     >
       {/* Sisi Kiri: Logo */}
@@ -78,7 +78,7 @@ export default function Navbar() {
             alt="Green Power Logo"
             width={300}
             height={100}
-            className="object-contain"
+            className="object-contain w-[150px] md:w-[200px] lg:w-[300px]"
           />
         ) : (
           <Image
@@ -86,7 +86,7 @@ export default function Navbar() {
             alt="Green Power Logo"
             width={300}
             height={100}
-            className="object-contain"
+            className="object-contain w-[150px] md:w-[200px] lg:w-[300px]"
           />
         )}
       </Link>
@@ -124,8 +124,9 @@ export default function Navbar() {
           </SheetTrigger>
           <SheetContent
             side="right"
-            className="bg-gray-900/95 text-white border-l-white/20 backdrop-blur-md"
+            className="bg-gray-900/95 text-white border-l-white/20 backdrop-blur-md p-6"
           >
+            <SheetTitle className="sr-only">Menu Navigasi</SheetTitle>
             <nav className="flex flex-col gap-6 mt-8">
               {/* Using the map here too so mobile matches desktop */}
               {navItems.map((item, index) => (
@@ -138,13 +139,13 @@ export default function Navbar() {
                 </Link>
               ))}
             </nav>
-            <div className="flex flex-col gap-4 mt-8">
-              <Button className="bg-white text-black font-semibold hover:bg-gray-200 w-full">
+            <div className="flex flex-col gap-4 mt-auto pt-8">
+              <Button className="bg-secondary text-white font-semibold hover:bg-primary w-full rounded-full py-6">
                 Hubungi Kami
               </Button>
               <Button
-                variant="ghost"
-                className="text-white font-semibold hover:bg-white/10 hover:text-white w-full border border-white/20"
+                variant="outline"
+                className="text-white font-semibold hover:bg-white/10 hover:text-white w-full border-white/30 rounded-full py-6"
               >
                 Pendaftaran
               </Button>

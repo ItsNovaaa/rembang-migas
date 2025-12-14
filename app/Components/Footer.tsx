@@ -5,19 +5,20 @@ export default function Footer() {
   return (
     // 1. CHANGE: Added 'relative' and 'z-0' to ensure it sits behind the image above
     <footer className="bg-secondary text-white py-12 md:py-16 relative z-0">
-      <div className="container mx-auto px-20">
-        
+      <div className="container mx-auto px-4 md:px-12 lg:px-20">
+
         {/* ... (The rest of your footer content remains exactly the same) ... */}
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-32">
           {/* --- Kolom 1: Brand & Social Links --- */}
           <div>
-            <Link href="/" className="flex items-center gap-2">
+            {/* <Link href="/" className="flex items-center gap-2">
               <Zap className="h-6 w-6 text-yellow-400" />
               <span className="text-xl font-bold text-white">
                 Green Power
               </span>
-            </Link>
+            </Link> */}
+            <img src="/logo-white.png" alt="Logo" />
             <p className="mt-4 text-sm max-w-xs">
               Green Power adalah penyedia terkemuka solusi energi surya.
             </p>

@@ -45,8 +45,8 @@ const benefitsData: Benefit[] = [
 export default function BenefitsSection() {
   return (
     // 1. Tata Letak Section Utama
-    <section className="bg-white text-gray-900 py-16 md:py-20">
-      <div className="container mx-auto px-10">
+    <section className="bg-[#f2fcfc] text-gray-900 py-16 md:py-20">
+      <div className="container mx-auto px-4 md:px-8 lg:px-10">
 
         {/* 2. Area Header */}
         <div className="flex flex-col md:flex-row justify-between md:items-start gap-6 mb-12">
@@ -74,7 +74,7 @@ export default function BenefitsSection() {
               // 4. Styling Kartu Individual
               <Card
                 key={benefit.title}
-                className="rounded-2xl overflow-hidden border  bg-white"
+                className="rounded-2xl overflow-hidden border  bg-[#e8f9f9]"
               >
                 {/* Area Gambar & Ikon (Bagian Atas) */}
                 <div className="relative">
@@ -96,10 +96,10 @@ export default function BenefitsSection() {
 
                 {/* Area Konten (Bagian Bawah) */}
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-bold text-gray-900">
+                  <h3 className="text-lg font-bold text-primary">
                     {benefit.title}
                   </h3>
-                  <p className="text-sm text-gray-600 mt-2">
+                  <p className="text-sm text-primary mt-2">
                     {benefit.description}
                   </p>
                 </CardContent>

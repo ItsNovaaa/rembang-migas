@@ -37,7 +37,7 @@ const data = [
 
 export default function MarqueeSection() {
   return (
-    <section className="py-16 md:py-20 bg-white">
+    <section className="py-16 md:py-20 bg-[#f2fcfc]">
       <div className="text-center px-40 py-10 flex flex-col items-center gap-4">
         <span className="inline-block bg-secondary/10 text-secondary text-sm font-semibold px-4 py-1 rounded-full">
           TENTANG KAMI

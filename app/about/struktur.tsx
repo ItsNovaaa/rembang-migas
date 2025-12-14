@@ -16,23 +16,23 @@ function TeamCard({ member }: { member: TeamMember }) {
     member.level === "ceo"
       ? "text-teal-600"
       : member.level === "manager"
-      ? "text-blue-600"
-      : "text-gray-500";
+        ? "text-blue-600"
+        : "text-gray-500";
 
   const cardStyle =
     member.level === "ceo"
       ? "border-teal-200 shadow-md bg-teal-50/50"
       : member.level === "manager"
-      ? "border-blue-200 shadow-sm bg-blue-50/50"
-      : "border border-slate-100 bg-white";
+        ? "border-blue-200 shadow-sm bg-blue-50/50"
+        : "border border-slate-100 bg-white";
 
   // Warna border lingkaran gambar berdasarkan level
   const imgBorderColor =
     member.level === "ceo"
       ? "border-teal-500"
       : member.level === "manager"
-      ? "border-blue-400"
-      : "border-slate-200";
+        ? "border-blue-400"
+        : "border-slate-200";
 
   return (
     <div
@@ -56,8 +56,8 @@ function TeamCard({ member }: { member: TeamMember }) {
             }
             alt={member.name}
             className="w-20 h-20 rounded-full object-cover"
-            // Jika menggunakan Next Image, ganti line di atas dengan:
-            // width={80} height={80} className="rounded-full object-cover"
+          // Jika menggunakan Next Image, ganti line di atas dengan:
+          // width={80} height={80} className="rounded-full object-cover"
           />
         </div>
       </div>
@@ -145,13 +145,13 @@ export default function OrganizationChartWithImages() {
 
         {/* Garis Bercabang */}
         {/* Lebar container disesuaikan agar pas dengan 2 kartu staff di bawahnya */}
-        <div className="w-[460px]">
+        <div className="w-full max-w-[460px]">
           <BranchConnector />
         </div>
 
         {/* === LEVEL 3: STAFF === */}
         {/* Lebar container disesuaikan */}
-        <div className="flex justify-between w-[460px]">
+        <div className="flex flex-col md:flex-row justify-between w-full max-w-[460px] gap-4 md:gap-0">
           {/* Staff Kiri */}
           <div className="flex flex-col items-center">
             <TeamCard

@@ -11,7 +11,7 @@ import Navbar from "../Components/Navbar";
 export default function Hero() {
   return (
     <section>
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-4 pt-20 pb-40">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-4 pt-20 pb-20 md:pb-40">
         <h1 className="text-5xl md:text-6xl lg:text-5xl font-bold max-w-5xl">
           Energi yang Lahir dari Bumi <br /> Rembang, Digerakkan Manusia, dan
           Diberkahi oleh Doa{" "}
@@ -23,7 +23,7 @@ export default function Hero() {
       </div>
 
       {/* 4. Komponen Info Cards */}
-      <div className="absolute z-20 bottom-10 left-0 right-0 w-full max-w-xl mx-auto px-4 pb-20">
+      <div className="relative md:absolute z-20 md:bottom-10 left-0 right-0 w-full max-w-sm md:max-w-xl mx-auto px-4 pb-10 md:pb-20 -mt-20 md:mt-0">
         <div className="flex flex-col md:flex-row gap-4">
           {/* Card 1: Alternative Energy */}
           <Card className="flex-1 grow-2 bg-white/5 backdrop-blur-md border-white/20 text-white">
