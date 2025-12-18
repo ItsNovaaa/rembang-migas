@@ -18,28 +18,11 @@ export default function Footer() {
                 Green Power
               </span>
             </Link> */}
-            <img src="/logo-white.png" alt="Logo" />
+            <img src="/logoputihcut.png" alt="Logo" />
             <p className="mt-4 text-sm max-w-xs">
               Green Power adalah penyedia terkemuka solusi energi surya.
             </p>
 
-            <h3 className="text-lg font-semibold text-white mt-8 mb-4">
-              Tautan Sosial
-            </h3>
-            <div className="flex gap-4">
-              <a href="#" className="hover:text-white transition-colors">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
-                <Youtube className="h-5 w-5" />
-              </a>
-            </div>
           </div>
 
           {/* --- Kolom 2: Quick Link --- */}
@@ -82,6 +65,24 @@ export default function Footer() {
                 San Francisco, CA 94122
               </p>
             </div>
+                        <h3 className="text-lg font-semibold text-white mt-8 mb-4">
+              Tautan Sosial
+            </h3>
+            <div className="flex gap-4">
+              <a href="#" className="hover:text-white transition-colors">
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a href="#" className="hover:text-white transition-colors">
+                <Linkedin className="h-5 w-5" />
+              </a>
+              <a href="#" className="hover:text-white transition-colors">
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a href="#" className="hover:text-white transition-colors">
+                <Youtube className="h-5 w-5" />
+              </a>
+            </div>
+
           </div>
         </div>
       </div>
