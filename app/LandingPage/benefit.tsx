@@ -45,7 +45,7 @@ const benefitsData: Benefit[] = [
 export default function BenefitsSection() {
   return (
     // 1. Tata Letak Section Utama
-    <section className="bg-[#f2fcfc] text-gray-900 py-16 md:py-20">
+    <section className="text-gray-900 py-16 md:py-20" id="benefit">
       <div className="container mx-auto px-4 md:px-8 lg:px-10">
 
         {/* 2. Area Header */}

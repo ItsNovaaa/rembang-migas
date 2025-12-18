@@ -13,22 +13,25 @@ import Produk from "./produk";
 
 export default function AboutUs() {
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="flex flex-col min-h-screen">
       {/* 1. Navbar (Akan kita buat style khusus agar putih seperti gambar) */}
       <Navbar />
 
       {/* 2. Main Content Wrapper */}
       {/* PENTING: 'pt-[80px]' atau 'pt-20' memberikan jarak agar konten tidak tertutup Navbar Fixed */}
-      <main className="flex-grow"> 
-        
+      <main className="flex-grow">
         {/* HERO SECTION */}
-        <Hero />
-        {/* Our Story Section */}
-        <OurStory />
-        {/* Team Section */}
-        <Struktur />
-        {/* Partners Section */}
-        <Mitra />
+        <div className="bg-[#f2fcfc]">
+          <Hero />
+          {/* Our Story Section */}
+          <OurStory />
+          {/* Team Section */}
+        </div>
+        <div className="bg-gradient-to-b from-[#f2fcfc] to-[#e8f9f9]">
+          <Struktur />
+          {/* Partners Section */}
+          <Mitra />
+        </div>
         {/* Footer Section */}
         <Footer />
       </main>

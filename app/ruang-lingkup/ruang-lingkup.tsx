@@ -32,7 +32,7 @@ const BentoCard = ({
 export default function BusinessScope() {
   return (
     // BACKGROUND UTAMA: Abu-abu Sangat Muda (Slate-50)
-    <section className="bg-slate-100 text-slate-900 py-20 px-4 md:px-8 relative overflow-hidden">
+    <section className=" text-slate-900 py-20 px-4 md:px-8 relative overflow-hidden">
       
       {/* Dekorasi Background Abstract (Halus) */}
       <div className="absolute inset-0 opacity-30 pointer-events-none">
@@ -56,7 +56,7 @@ export default function BusinessScope() {
           
           {/* --- KARTU 1: HULU & HILIR (Besar) --- */}
           <BentoCard className="md:col-span-2 lg:col-span-2 row-span-1 flex flex-col justify-center">
-            <div className="mb-6 flex items-center gap-4 border-b border-gray-100 pb-4">
+            <div className="mb-6 flex items-center gap-4 border-b border-gray-100 pb-4" id="huluhilir">
               {/* Icon Wrapper: Hijau Muda */}
               <div className="p-3 rounded-xl bg-primary/10 text-primary">
                 <Droplets size={32} />
@@ -108,7 +108,7 @@ export default function BusinessScope() {
 
           {/* --- KARTU 3: ENERGI & MINERAL --- */}
           <BentoCard className="md:col-span-1">
-            <div className="mb-4 flex items-center gap-3">
+            <div className="mb-4 flex items-center gap-3" id="energi">
               <div className="p-2 rounded-lg bg-primary/10 text-primary">
                 <Pickaxe size={24} />
               </div>
@@ -133,8 +133,8 @@ export default function BusinessScope() {
           </BentoCard>
 
           {/* --- KARTU 4: JASA PENUNJANG --- */}
-          <BentoCard className="md:col-span-1">
-            <div className="mb-4 flex items-center gap-3">
+          <BentoCard className="md:col-span-1" >
+            <div className="mb-4 flex items-center gap-3" id="jasapenunjang">
               <div className="p-2 rounded-lg bg-primary/10 text-primary">
                 <Wrench size={24} />
               </div>

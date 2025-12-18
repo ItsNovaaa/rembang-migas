@@ -17,7 +17,8 @@ const milestones = [
     year: "2019",
     title: "PENJAJAKAN PELUANG GLOBAL",
     description:
-    "PT Rembang Migas Energi (Perseroda) mulai aktif mencari peluang dan investor, mendampingi investor dari Qatar untuk survei lokasi pembangunan kilang gas terapung, pembangkit listrik lepas pantai, dan tempat penyimpanan ikan.  "},
+      "PT Rembang Migas Energi (Perseroda) mulai aktif mencari peluang dan investor, mendampingi investor dari Qatar untuk survei lokasi pembangunan kilang gas terapung, pembangkit listrik lepas pantai, dan tempat penyimpanan ikan.  "
+  },
   {
     year: "2021",
     title: "PARTISIPASI HULU MIGAS",
@@ -90,10 +91,11 @@ function TimelineItem({ item, index }: { item: any; index: number }) {
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className={cn(
-        "relative flex items-center md:justify-between",
+        "relative flex items-center md:justify-between scroll-mt-24",
         // Mobile: Selalu rata kanan dari garis. Desktop: Selang seling.
         isEven ? "md:flex-row" : "md:flex-row-reverse"
       )}
+      id={item.year}
     >
       {/* 1. SPACE KOSONG (Untuk menyeimbangkan layout selang-seling di desktop) */}
       <div className="hidden md:block w-5/12" />
@@ -111,14 +113,14 @@ function TimelineItem({ item, index }: { item: any; index: number }) {
 
       {/* 3. CONTENT CARD */}
       {/* Mobile: padding-left besar karena garis ada di kiri. Desktop: normal. */}
-      <div className="w-full pl-12 md:pl-0 md:w-5/12">
+      <div className="w-full pl-12 md:pl-0 md:w-5/12" >
         <div className="group p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-secondary/30 hover:shadow-xl hover:shadow-secondary/5 transition-all duration-300">
           {/* Header Card */}
           <div className="flex items-center gap-3 mb-3">
             <div className="p-2 rounded-lg bg-secondary/10 text-secondary group-hover:bg-secondary group-hover:text-white transition-colors">
               <Calendar size={18} />
             </div>
-            <h3 className="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">
+            <h3 className="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors" >
               {item.title}
             </h3>
           </div>

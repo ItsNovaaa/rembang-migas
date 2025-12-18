@@ -4,7 +4,7 @@ import { ArrowRight, Star } from "lucide-react";
 
 export default function AboutUsSection() {
   return (
-    <section className="bg-[#f2fcfc] text-gray-900 py-36 md:py-28"  >
+    <section className="bg-[#f2fcfc] text-gray-900 py-36 md:py-28" id="about" >
       <div className="container mx-auto px-4">
         {/* 1. Tata Letak Section Utama (Grid) */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mx-4 md:mx-8 lg:mx-12 items-center">
@@ -109,8 +109,8 @@ export default function AboutUsSection() {
                 <Card className="bg-white border-gray-200 rounded-2xl shadow-lg p-4 md:p-6 w-full">
                   <CardContent className="p-0">
                     <div className="flex items-baseline gap-2">
-                      <span className="text-3xl md:text-5xl font-bold text-gray-900">05+</span>
-                      <span className="text-lg text-gray-700">Pengalaman</span>
+                      <span className="text-3xl md:text-5xl font-bold text-primary">05+</span>
+                      <span className="text-lg text-primary">Pengalaman</span>
                     </div>
                     <p className="text-gray-600 mt-3 text-sm md:text-base">
                       Visi kami adalah menjadi pemimpin global dalam solusi energi

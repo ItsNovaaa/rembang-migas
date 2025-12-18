@@ -32,7 +32,7 @@ function TeamCard({ member }: { member: TeamMember }) {
       ? "border-teal-500"
       : member.level === "manager"
         ? "border-blue-400"
-        : "border-slate-200";
+        : "border-slate-500";
 
   return (
     <div
@@ -109,7 +109,7 @@ function BranchConnector() {
 
 export default function OrganizationChartWithImages() {
   return (
-    <section className="py-20 px-4 bg-slate-50 min-h-screen flex flex-col items-center">
+    <section className="py-20 px-4  min-h-screen flex flex-col items-center" id="struktur">
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold text-slate-900 mb-3">Tim Teknis</h2>
         <p className="text-lg text-slate-600 mt-2">
@@ -151,7 +151,7 @@ export default function OrganizationChartWithImages() {
 
         {/* === LEVEL 3: STAFF === */}
         {/* Lebar container disesuaikan */}
-        <div className="flex flex-col md:flex-row justify-between w-full max-w-[460px] gap-4 md:gap-0">
+        <div className="flex flex-col md:flex-row justify-between w-full max-w-[460px] gap-4 md:gap-4">
           {/* Staff Kiri */}
           <div className="flex flex-col items-center">
             <TeamCard

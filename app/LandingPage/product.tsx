@@ -49,7 +49,7 @@ const services = [
 
 export default function ServiceSection() {
   return (
-    <section className="bg-[#f2fcfc] text-gray-900 py-16 md:py-20">
+    <section className="bg-[#f2fcfc] text-gray-900 py-16 md:py-20" id="produk">
       <div className="container mx-auto px-4 md:px-8">
 
         {/* --- AREA HEADER --- */}
@@ -58,11 +58,11 @@ export default function ServiceSection() {
             <span className="inline-block bg-secondary/10 text-secondary text-sm font-semibold px-4 py-1 rounded-full">
               Produk & Layanan
             </span>
-            <h2 className="text-4xl font-bold text-gray-900 mt-4">
+            <h2 className="text-4xl font-bold text-primary mt-4">
               Solusi Surya Kami
             </h2>
           </div>
-          <p className="text-gray-600 text-lg max-w-md md:mt-2">
+          <p className="text-[#566694] text-lg max-w-md md:mt-2">
             Kami percaya pada kekuatan energi surya untuk mengubah kehidupan dan
             komunitas melalui solusi komprehensif.
           </p>

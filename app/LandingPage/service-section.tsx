@@ -94,7 +94,7 @@ const servicesData: ServiceItemData[] = [
 
 export default function AdvancedServiceSection() {
   return (
-    <section className="bg-[#f2fcfc] md:py-20">
+    <section className="bg-[#f2fcfc] md:py-20" id="ruang-lingkup">
       <div className="mx-4 md:mx-12 lg:mx-22 my-12 py-12 bg-[#e8f9f9] rounded-2xl">
 
         {/* Header Section */}

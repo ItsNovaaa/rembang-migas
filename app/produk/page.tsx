@@ -19,7 +19,9 @@ export default function Produk() {
       <main className="flex-grow">
         {/* Produk Section */}
         <Hero />
-        <ProdukSection />
+        <div className="bg-gradient-to-b from-[#f2fcfc] to-[#e8f9f9]">
+          <ProdukSection />
+        </div>
         <Footer />
       </main>
     </div>

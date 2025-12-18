@@ -69,7 +69,7 @@ export default function BeritaPage() {
 
   return (
     <main className="min-h-screen bg-white pt-24 pb-20">
-      <div className="container mx-auto px-4 md:px-8 max-w-5xl">
+      <div className="container mx-auto px-4 md:px-8 max-w" id="berita">
         
         {/* Header Halaman */}
         <div className="text-center mb-16">
@@ -85,7 +85,7 @@ export default function BeritaPage() {
         </div>
 
         {/* Daftar Berita */}
-        <div className="flex flex-col border-t border-slate-200">
+        <div className="flex flex-col border-t border-slate-200" >
           {/* 5. Slice data berdasarkan visibleCount */}
           {allNewsData.slice(0, visibleCount).map((post) => (
             <BlogPostItem key={post.id} post={post} />

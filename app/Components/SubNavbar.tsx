@@ -1,20 +1,28 @@
 'use client'
 
-import { useState, useEffect } from "react"; // 1. Import hooks
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
-import { ArrowRight, Leaf, Menu, Sparkles } from "lucide-react";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu"
+import { ArrowRight, Leaf, Menu, Sparkles, ChevronDown } from "lucide-react";
+import { cn } from "@/lib/utils"; // Assuming you have a utils file from shadcn setup
 
 export default function SubNavbar() {
-  // 2. State to track scroll status
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // 3. Effect to handle scroll event
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) { // Change threshold as needed
+      if (window.scrollY > 50) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -26,51 +34,58 @@ export default function SubNavbar() {
   }, []);
 
   const navItems = [
-    {
-      title: "Beranda",
-      href: "/",
-      icon: Sparkles,
-    },
-    {
-      title: "Tentang Kami",
-      href: "/about",
-      icon: Leaf,
-    },
-    {
-      title: "Produk",
-      href: "/produk",
-      icon: Sparkles,
-    },
-    {
-      title: "Ruang Lingkup",
-      href: "/ruang-lingkup",
-      icon: Sparkles,
-    },
-    {
-      title: "Pencapaian",
-      href: "/milestone",
-      icon: Sparkles,
-    },
+    { id: 1, title: "Beranda", href: "/", icon: Sparkles },
+    { id: 2, title: "Tentang Kami", href: "/about", icon: Leaf },
+    { id: 3, title: "Produk", href: "/produk", icon: Sparkles },
+    { id: 4, title: "Berita", href: "/berita", icon: Sparkles },
+    { id: 5, title: "Pencapaian", href: "/milestone", icon: Sparkles },
+    { id: 6, title: "Ruang Lingkup", href: "/ruang-lingkup", icon: Sparkles },
   ];
 
+  const Navchild = [
+    { id: 1, title: "Tentang Kami", href: "/#about", icon: Leaf, idParent: 1 },
+    { id: 2, title: "Produk & Layanan", href: "/#produk", icon: Leaf, idParent: 1 },
+    { id: 3, title: "Berita", href: "/#berita", icon: Leaf, idParent: 1 },
+    { id: 4, title: "Manfaat", href: "/#benefit", icon: Leaf, idParent: 1 },
+    { id: 5, title: "Contact", href: "/#contact", icon: Leaf, idParent: 1 },
+    { id: 6, title: "Cerita Kita", href: "/about/#cerita", icon: Leaf, idParent: 2 },
+    { id: 7, title: "Struktur ", href: "/about/#struktur", icon: Leaf, idParent: 2 },
+    { id: 8, title: "Mitra", href: "/about/#partner", icon: Leaf, idParent: 2 },
+    { id: 9, title: "Produk ", href: "/produk/#produk-section", icon: Sparkles, idParent: 3 },
+    { id: 10, title: "Berita", href: "/berita/#berita", icon: Sparkles, idParent: 4 },
+    { id: 11, title: "2017", href: "/milestone/#2017", icon: Sparkles, idParent: 5 },
+    { id: 12, title: "2019", href: "/milestone/#2019", icon: Sparkles, idParent: 5 },
+    { id: 13, title: "2021", href: "/milestone/#2021", icon: Sparkles, idParent: 5 },
+    { id: 14, title: "Hulu Dan Hilir", href: "/ruang-lingkup/#huluhilir", icon: Sparkles, idParent: 6 },
+    { id: 15, title: "Energi", href: "/ruang-lingkup/#energi", icon: Sparkles, idParent: 6 },
+    { id: 16, title: "Jasa Penunjang", href: "/ruang-lingkup/#jasapenunjang", icon: Sparkles, idParent: 6 },
+
+  ];
 
   return (
     <header
-      // 4. Dynamic ClassName based on isScrolled state
-      className={` py-2 flex items-center justify-between px-4 md:px-8 lg:px-12 transition-all duration-300 ease-in-out ${isScrolled
-        ? "bg-white/50 backdrop-blur-md shadow-lg" // Style when scrolled
-        : "bg-transparent items-center" // Style when at top
+      className={`sticky top-0 py-2 w-full z-50 flex items-center justify-between px-4 md:px-8 lg:px-12 transition-all duration-300 ease-in-out ${isScrolled
+        ? "bg-white/60 backdrop-blur-md shadow-lg text-primary"
+        : "bg-transparent items-center"
         }`}
     >
-      {/* Sisi Kiri: Logo */}
+      {/* LEFT: Logo */}
       <Link href="/" className="flex items-center gap-2">
+        {/* <Leaf className="text-primary w-7 h-7" />
+        <span
+          className={`text-2xl font-bold ${
+            isScrolled ? "text-black" : "text-white"
+          }`}
+        >
+          Green Power
+        </span> */}
         {isScrolled ? (
           <Image
             src="/logo-color.png"
             alt="Green Power Logo"
             width={300}
             height={100}
-            className="w-[150px] md:w-[200px] lg:w-[300px]"
+            className="object-contain w-[150px] md:w-[200px] lg:w-[300px]"
           />
         ) : (
           <Image
@@ -78,25 +93,67 @@ export default function SubNavbar() {
             alt="Green Power Logo"
             width={300}
             height={100}
-            className="w-[150px] md:w-[200px] lg:w-[300px]"
+            className="object-contain w-[150px] md:w-[200px] lg:w-[300px]"
           />
         )}
       </Link>
 
-      {/* Sisi Tengah: Navigasi (Desktop) */}
-      <nav className="hidden md:flex gap-6 text-lg">
-        {navItems.map((item, index) => (
-          <Link
-            key={index}
-            href={item.href}
-            className="text-black hover:text-secondary transition-colors duration-200 flex items-center"
-          >
-            <span className="ml-2">{item.title}</span>
-          </Link>
-        ))}
-      </nav>
+      {/* CENTER: Navigation (Desktop) with Dropdown */}
+      <div className="hidden md:flex">
+        <NavigationMenu viewport={false}>
+          <NavigationMenuList className="gap-2">
+            {navItems.map((item) => {
+              // Check if this item has children
+              const children = Navchild.filter((child) => child.idParent === item.id);
+              const hasChildren = children.length > 0;
 
-      {/* Sisi Kanan: Tombol Aksi (Desktop) */}
+              return (
+                <NavigationMenuItem key={item.id}>
+                  {hasChildren ? (
+                    <>
+                      {/* Using Trigger for items with dropdowns */}
+                      <NavigationMenuTrigger
+                        className="bg-transparent text-lg font-normal hover:!text-secondary hover:!bg-transparent focus:!bg-transparent data-[active]:!bg-transparent data-[state=open]:!bg-transparent data-[state=open]:!text-secondary"
+                      // asChild
+                      >
+                        <Link href={item.href}>
+                          {item.title}
+                        </Link>
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent>
+                        <ul className="grid w-auto min-w-[150px] gap-2 p-4 bg-white rounded-md shadow-md">
+                          {children.map((child) => (
+                            <ListItem
+                              key={child.id}
+                              title={child.title}
+                              href={child.href}
+                              icon={child.icon}
+                            />
+                          ))}
+                        </ul>
+                      </NavigationMenuContent>
+                    </>
+                  ) : (
+                    /* Standard Link for items without dropdowns */
+                    <Link href={item.href} legacyBehavior passHref>
+                      <NavigationMenuLink
+                        className={cn(
+                          navigationMenuTriggerStyle(),
+                          "bg-transparent text-lg font-normal hover:!text-secondary hover:!bg-transparent focus:!bg-transparent"
+                        )}
+                      >
+                        {item.title}
+                      </NavigationMenuLink>
+                    </Link>
+                  )}
+                </NavigationMenuItem>
+              );
+            })}
+          </NavigationMenuList>
+        </NavigationMenu>
+      </div>
+
+      {/* RIGHT: Action Buttons (Desktop) */}
       <div className="hidden md:flex items-center gap-2">
         <Button className="bg-secondary text-white font-semibold hover:bg-primary rounded-full">
           Hubungi Kami
@@ -104,34 +161,44 @@ export default function SubNavbar() {
         </Button>
       </div>
 
-      {/* Tombol Menu Mobile (Hamburger) */}
+      {/* MOBILE: Hamburger Menu */}
       <div className="md:hidden">
         <Sheet>
           <SheetTrigger asChild>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="text-black hover:bg-black/10 hover:text-black"
-            >
+            <Button variant="ghost" size="icon" className="text-black hover:bg-black/10">
               <Menu className="h-6 w-6" />
             </Button>
           </SheetTrigger>
-          <SheetContent
-            side="right"
-            className="bg-gray-900/95 text-white border-l-white/20 backdrop-blur-md p-6"
-          >
+          <SheetContent side="right" className="bg-gray-900/95 text-white border-l-white/20 p-6">
             <SheetTitle className="sr-only">Menu Navigasi</SheetTitle>
             <nav className="flex flex-col gap-6 mt-8">
-              {/* Using the map here too so mobile matches desktop */}
-              {navItems.map((item, index) => (
-                <Link
-                  key={index}
-                  href={item.href}
-                  className="font-semibold text-white hover:text-secondary text-lg"
-                >
-                  {item.title}
-                </Link>
-              ))}
+              {navItems.map((item) => {
+                const children = Navchild.filter((child) => child.idParent === item.id);
+                return (
+                  <div key={item.id} className="flex flex-col gap-2">
+                    <Link
+                      href={item.href}
+                      className="font-semibold text-white hover:text-secondary text-lg"
+                    >
+                      {item.title}
+                    </Link>
+                    {/* Simple Mobile indentation for children */}
+                    {children.length > 0 && (
+                      <div className="flex flex-col gap-2 pl-4 border-l border-white/20 ml-1">
+                        {children.map(child => (
+                          <Link
+                            key={child.id}
+                            href={child.href}
+                            className="text-white/70 hover:text-white text-sm"
+                          >
+                            {child.title}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )
+              })}
             </nav>
             <div className="flex flex-col gap-4 mt-auto pt-8">
               <Button className="bg-secondary text-white font-semibold hover:bg-primary w-full rounded-full py-6">
@@ -144,3 +211,27 @@ export default function SubNavbar() {
     </header>
   );
 }
+
+// Helper component for the dropdown list items
+const ListItem = ({ className, title, href, icon: Icon, ...props }: any) => {
+  return (
+    <li>
+      <Link href={href} legacyBehavior passHref>
+        <NavigationMenuLink asChild>
+          <a
+            className={cn(
+              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+              className
+            )}
+            {...props}
+          >
+            <div className="flex items-center gap-2 text-sm font-medium leading-none">
+              {/* {Icon && <Icon className="w-4 h-4 text-secondary" />} */}
+              {title}
+            </div>
+          </a>
+        </NavigationMenuLink>
+      </Link>
+    </li>
+  );
+};

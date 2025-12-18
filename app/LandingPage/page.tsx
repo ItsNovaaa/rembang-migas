@@ -44,7 +44,7 @@ export default function HomePage() {
       <main className="relative min-h-screen text-white">
         {/* 1. Gambar Latar Belakang */}
         <Image
-          src="/Pertambangan.png" 
+          src="/Pertambangan.png"
           alt="Pemandangan kincir angin"
           fill
           className="object-cover -z-10"
@@ -63,10 +63,12 @@ export default function HomePage() {
       <Product />
       <Berita />
       <Service />
-      <Benefit />
-      {/* <Marquee /> */}
-      <WorkWithUs />
+      <div className="bg-gradient-to-b from-[#f2fcfc] to-[#e8f9f9]">
+        <Benefit />
+        <WorkWithUs />
+      </div>
       <Footer />
+      {/* <Marquee /> */}
 
       {showTopButton && (
         <button

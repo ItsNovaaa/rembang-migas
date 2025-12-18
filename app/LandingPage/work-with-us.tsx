@@ -7,7 +7,7 @@ export default function WorkWithUs() {
   return (
     // 1. CHANGE: Removed 'overflow-hidden'. Use 'overflow-visible' or nothing.
     // We also add 'relative z-10' to the section context.
-    <section className="text-gray-900 overflow-visible relative z-10 pb-10">
+    <section className="text-gray-900 overflow-visible relative z-10 pb-10" id="contact">
       <div className="container mx-auto px-4 md:px-12 lg:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 

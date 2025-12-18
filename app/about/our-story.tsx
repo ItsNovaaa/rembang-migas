@@ -9,7 +9,7 @@ export default function OurStory() {
   const [activeTab, setActiveTab] = useState("vision");
 
   return (
-    <section className="py-20 px-6 md:px-12 max-w-5xl mx-auto">
+    <section className="py-20 px-6 md:px-12 max-w-5xl mx-auto" id="cerita">
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold text-primary mb-3">
           Cerita Kami
