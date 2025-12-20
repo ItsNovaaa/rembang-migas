@@ -15,7 +15,13 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { ArrowRight, Leaf, Menu, Sparkles, ChevronDown } from "lucide-react";
-import { cn } from "@/lib/utils"; // Assuming you have a utils file from shadcn setup
+import { cn } from "@/lib/utils";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export default function SubNavbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -43,8 +49,8 @@ export default function SubNavbar() {
   ];
 
   const Navchild = [
-    { id: 1, title: "Tentang Kami", href: "/#about", icon: Leaf, idParent: 1 }, 
-    { id: 2, title: "Produk & Layanan", href: "/#produk", icon: Leaf, idParent: 1 }, 
+    { id: 1, title: "Tentang Kami", href: "/#about", icon: Leaf, idParent: 1 },
+    { id: 2, title: "Produk & Layanan", href: "/#produk", icon: Leaf, idParent: 1 },
     { id: 3, title: "Berita", href: "/#berita", icon: Leaf, idParent: 1 },
     { id: 4, title: "Manfaat", href: "/#benefit", icon: Leaf, idParent: 1 },
     { id: 5, title: "Contact", href: "/#contact", icon: Leaf, idParent: 1 },
@@ -99,7 +105,7 @@ export default function SubNavbar() {
       </Link>
 
       {/* CENTER: Navigation (Desktop) with Dropdown */}
-      <div className="hidden md:flex">
+      <div className="hidden lg:flex">
         <NavigationMenu>
           <NavigationMenuList className="gap-2">
             {navItems.map((item) => {
@@ -114,7 +120,7 @@ export default function SubNavbar() {
                       {/* Using Trigger for items with dropdowns */}
                       <NavigationMenuTrigger
                         className="bg-transparent text-lg font-normal hover:!text-secondary hover:!bg-transparent focus:!bg-transparent data-[active]:!bg-transparent data-[state=open]:!bg-transparent data-[state=open]:!text-secondary"
-                        // asChild
+                      // asChild
                       >
                         <Link href={item.href}>
                           {item.title}
@@ -154,51 +160,69 @@ export default function SubNavbar() {
       </div>
 
       {/* RIGHT: Action Buttons (Desktop) */}
-      <div className="hidden md:flex items-center gap-2">
+      <div className="hidden lg:flex items-center gap-2">
         <Button className="bg-secondary text-white font-semibold hover:bg-primary rounded-full">
           Hubungi Kami
           <ArrowRight className="w-4 h-4 ml-2" />
         </Button>
       </div>
 
-      {/* MOBILE: Hamburger Menu */}
-      <div className="md:hidden">
+      {/* MOBILE: Hamburger Menu (includes tablets) */}
+      <div className="lg:hidden">
         <Sheet>
           <SheetTrigger asChild>
             <Button variant="ghost" size="icon" className="text-black hover:bg-black/10">
               <Menu className="h-6 w-6" />
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="bg-gray-900/95 text-white border-l-white/20 p-6">
+          <SheetContent side="right" className="bg-gray-900/95 text-white border-l-white/20 p-6 overflow-y-auto">
             <SheetTitle className="sr-only">Menu Navigasi</SheetTitle>
-            <nav className="flex flex-col gap-6 mt-8">
-              {navItems.map((item) => {
-                const children = Navchild.filter((child) => child.idParent === item.id);
-                return (
-                  <div key={item.id} className="flex flex-col gap-2">
-                    <Link
-                      href={item.href}
-                      className="font-semibold text-white hover:text-secondary text-lg"
-                    >
-                      {item.title}
-                    </Link>
-                    {/* Simple Mobile indentation for children */}
-                    {children.length > 0 && (
-                      <div className="flex flex-col gap-2 pl-4 border-l border-white/20 ml-1">
-                        {children.map(child => (
-                          <Link
-                            key={child.id}
-                            href={child.href}
-                            className="text-white/70 hover:text-white text-sm"
-                          >
-                            {child.title}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                )
-              })}
+            <nav className="flex flex-col mt-8">
+              <Accordion type="multiple" className="w-full">
+                {navItems.map((item) => {
+                  const children = Navchild.filter((child) => child.idParent === item.id);
+                  const hasChildren = children.length > 0;
+
+                  if (hasChildren) {
+                    return (
+                      <AccordionItem
+                        key={item.id}
+                        value={`item-${item.id}`}
+                        className="border-b border-white/10"
+                      >
+                        <AccordionTrigger className="text-white hover:text-secondary hover:no-underline text-lg font-semibold py-4 [&>svg]:text-white/70">
+                          {item.title}
+                        </AccordionTrigger>
+                        <AccordionContent className="pb-4">
+                          <div className="flex flex-col gap-2 pl-4 border-l border-white/20 ml-1">
+                            {children.map((child) => (
+                              <Link
+                                key={child.id}
+                                href={child.href}
+                                className="text-white/70 hover:text-secondary text-sm py-1 transition-colors"
+                              >
+                                {child.title}
+                              </Link>
+                            ))}
+                          </div>
+                        </AccordionContent>
+                      </AccordionItem>
+                    );
+                  }
+
+                  // Items without children - render as simple link
+                  return (
+                    <div key={item.id} className="border-b border-white/10 py-4">
+                      <Link
+                        href={item.href}
+                        className="text-white hover:text-secondary text-lg font-semibold transition-colors"
+                      >
+                        {item.title}
+                      </Link>
+                    </div>
+                  );
+                })}
+              </Accordion>
             </nav>
             <div className="flex flex-col gap-4 mt-auto pt-8">
               <Button className="bg-secondary text-white font-semibold hover:bg-primary w-full rounded-full py-6">
