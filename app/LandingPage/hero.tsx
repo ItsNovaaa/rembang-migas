@@ -12,16 +12,25 @@ export default function Hero() {
   return (
     <section>
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-4 pt-20 pb-20 md:pb-40">
-        <h1 className="text-5xl md:text-6xl lg:text-5xl font-bold max-w-5xl">
-          Energi yang Lahir dari Bumi <br /> Rembang, Digerakkan Manusia, dan
-          Diberkahi oleh Doa{" "}
+        <h1 className="md:hidden text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold max-w-5xl leading-tight">
+          REMBANG MIGAS ENERGI
         </h1>
-        <p className="mt-4 text-lg md:text-xl max-w-2xl text-gray-200">
-          Temukan cara luar biasa energi surya dapat mengubah rumah atau bisnis
-          Anda.
-        </p>
-      </div>
+        <h1 className="hidden md:block text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold max-w-5xl leading-tight">
+          Energi yang Lahir dari Bumi Rembang, Digerakkan Manusia, dan Diberkahi
+          oleh Doa{" "}
+        </h1>
 
+        <p className="mt-4 text-base sm:text-lg md:text-xl max-w-2xl text-gray-200 leading-relaxed break-words">
+          <span className="md:hidden">
+            Energi yang Lahir dari Bumi Rembang, Digerakkan Manusia, dan
+            Diberkahi oleh Doa
+          </span>
+          <span className="hidden md:block">
+            Temukan cara luar biasa energi surya dapat mengubah rumah atau
+            bisnis Anda.{" "}
+          </span>
+        </p>
+      </div>{" "}
       {/* 4. Komponen Info Cards */}
       <div className="relative md:absolute z-20 md:bottom-10 left-0 right-0 w-full max-w-sm md:max-w-xl mx-auto px-4 pb-10 md:pb-20 -mt-20 md:mt-0">
         <div className="flex flex-col md:flex-row gap-4">
