@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Navbar from "../Components/SubNavbar"; // Pastikan path ini benar
 import Image from "next/image";
@@ -20,7 +20,9 @@ export default function Milestone() {
         {/* Produk Section */}
         <Hero />
         {/* Milestone Section */}
-        <MilestoneSection />
+        <div className="bg-gradient-to-b from-[#f2fcfc] to-[#e8f9f9]">
+          <MilestoneSection />
+        </div>
         <Footer />
       </main>
     </div>

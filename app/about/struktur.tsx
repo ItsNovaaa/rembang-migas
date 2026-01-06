@@ -111,8 +111,8 @@ export default function OrganizationChartWithImages() {
   return (
     <section className="py-20 px-4  min-h-screen flex flex-col items-center" id="struktur">
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-slate-900 mb-3">Tim Teknis</h2>
-        <p className="text-lg text-slate-600 mt-2">
+        <h2 className="text-4xl font-bold text-primary mb-3">Tim Teknis</h2>
+        <p className="text-lg text-primary mt-2">
           Struktur Divisi Teknologi & Pengembangan
         </p>
       </div>

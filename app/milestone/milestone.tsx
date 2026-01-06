@@ -42,7 +42,7 @@ export default function MilestoneSection() {
   const height = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section className="bg-white py-20 md:py-28 overflow-hidden">
+    <section className=" py-20 md:py-28 overflow-hidden">
       <div className="container mx-auto px-4 md:px-8 max-w-5xl">
         {/* Header */}
         <div className="text-center mb-16 md:mb-24">
@@ -114,7 +114,7 @@ function TimelineItem({ item, index }: { item: any; index: number }) {
       {/* 3. CONTENT CARD */}
       {/* Mobile: padding-left besar karena garis ada di kiri. Desktop: normal. */}
       <div className="w-full pl-12 md:pl-0 md:w-5/12" >
-        <div className="group p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-secondary/30 hover:shadow-xl hover:shadow-secondary/5 transition-all duration-300">
+        <div className="group p-6 bg-white rounded-2xl border border-slate-100 hover:border-secondary/30 hover:shadow-xl hover:shadow-secondary/5 transition-all duration-300">
           {/* Header Card */}
           <div className="flex items-center gap-3 mb-3">
             <div className="p-2 rounded-lg bg-secondary/10 text-secondary group-hover:bg-secondary group-hover:text-white transition-colors">

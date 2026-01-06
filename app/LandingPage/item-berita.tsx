@@ -43,10 +43,10 @@ export const BlogPostItem = ({ post }: { post: BlogPostData }) => {
 
       {/* 2. TEKS (Judul & Deskripsi Singkat) */}
       <div className="flex-grow">
-        <h3 className="text-2xl font-bold text-slate-900 leading-tight mb-3 hover:text-secondary transition-colors cursor-pointer">
+        <h3 className="text-2xl font-bold text-primary leading-tight mb-3 hover:text-secondary transition-colors cursor-pointer">
           {post.title}
         </h3>
-        <p className="text-slate-600 leading-relaxed line-clamp-2 md:line-clamp-3">
+        <p className="text-primary leading-relaxed line-clamp-2 md:line-clamp-3">
           {post.description}
         </p>
         

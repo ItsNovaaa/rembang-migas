@@ -13,7 +13,9 @@ export default function NewsPage() {
       <main className="flex-grow">
         {/* Produk Section */}
         <BeritaHero />
-        <Berita />
+        <div className="bg-gradient-to-b from-[#f2fcfc] to-[#e8f9f9]">
+          <Berita />
+        </div>
         <Footer />
       </main>
     </section>

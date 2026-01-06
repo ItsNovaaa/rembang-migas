@@ -14,7 +14,7 @@ export default function OurStory() {
         <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold text-primary mb-3">
           Cerita Kami
         </h2>
-        <p className="text-gray-600 text-lg">
+        <p className="text-primary text-lg">
           Discover our journey, our values, and what drives us forward.
           {/* translate ke bahasa indonesia Discover our journey, our values, and what drives us forward. */}
           Cari Tahu Tentang Kami, Niat Kami, dan apa yang kami ingin berusaha.

@@ -35,7 +35,7 @@ export default function OurPartners() {
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
             Partner Kami
           </h2>
-          <p className="text-gray-600 text-lg leading-relaxed">
+          <p className="text-primary text-lg leading-relaxed">
             Kami bangga dapat berkolaborasi dengan para pemimpin industri untuk
             mendorong inovasi dan memberikan nilai yang luar biasa.{" "}
           </p>
