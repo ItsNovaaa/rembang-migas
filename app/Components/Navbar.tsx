@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -40,32 +40,70 @@ export default function SubNavbar() {
   }, []);
 
   const navItems = [
-    { id: 1, title: "Beranda", href: "/", icon: Sparkles },
-    { id: 2, title: "Tentang Kami", href: "/about", icon: Leaf },
-    { id: 3, title: "Produk", href: "/produk", icon: Sparkles },
-    { id: 4, title: "Berita", href: "/berita", icon: Sparkles },
-    { id: 5, title: "Pencapaian", href: "/milestone", icon: Sparkles },
-    { id: 6, title: "Ruang Lingkup", href: "/ruang-lingkup", icon: Sparkles },
-  ];
-
-  const Navchild = [
-    { id: 1, title: "Tentang Kami", href: "/#about", icon: Leaf, idParent: 1 },
-    { id: 2, title: "Produk & Layanan", href: "/#produk", icon: Leaf, idParent: 1 },
-    { id: 3, title: "Berita", href: "/#berita", icon: Leaf, idParent: 1 },
-    { id: 4, title: "Manfaat", href: "/#benefit", icon: Leaf, idParent: 1 },
-    { id: 5, title: "Contact", href: "/#contact", icon: Leaf, idParent: 1 },
-    { id: 6, title: "Cerita Kita", href: "/about/#cerita", icon: Leaf, idParent: 2 },
-    { id: 7, title: "Struktur ", href: "/about/#struktur", icon: Leaf, idParent: 2 },
-    { id: 8, title: "Mitra", href: "/about/#partner", icon: Leaf, idParent: 2 },
-    { id: 9, title: "Produk ", href: "/produk/#produk-section", icon: Sparkles, idParent: 3 },
-    { id: 10, title: "Berita", href: "/berita/#berita", icon: Sparkles, idParent: 4 },
-    { id: 11, title: "2017", href: "/milestone/#2017", icon: Sparkles, idParent: 5 },
-    { id: 12, title: "2019", href: "/milestone/#2019", icon: Sparkles, idParent: 5 },
-    { id: 13, title: "2021", href: "/milestone/#2021", icon: Sparkles, idParent: 5 },
-    { id: 14, title: "Hulu Dan Hilir", href: "/ruang-lingkup/#huluhilir", icon: Sparkles, idParent: 6 },
-    { id: 15, title: "Energi", href: "/ruang-lingkup/#energi", icon: Sparkles, idParent: 6 },
-    { id: 16, title: "Jasa Penunjang", href: "/ruang-lingkup/#jasapenunjang", icon: Sparkles, idParent: 6 },
-
+    {
+      id: 1,
+      title: "Beranda",
+      href: "/",
+      icon: Sparkles,
+      children: [
+        { id: 1, title: "Tentang Kami", href: "/#about", description: "Pelajari lebih lanjut tentang visi, misi, dan nilai-nilai perusahaan kami." },
+        { id: 2, title: "Produk & Layanan", href: "/#produk", description: "Jelajahi berbagai produk dan layanan berkualitas yang kami tawarkan." },
+        { id: 3, title: "Berita", href: "/#berita", description: "Dapatkan informasi terbaru dan artikel menarik seputar industri kami." },
+        { id: 4, title: "Manfaat", href: "/#benefit", description: "Temukan keuntungan dan nilai tambah bekerjasama dengan kami." },
+        { id: 5, title: "Contact", href: "/#contact", description: "Hubungi tim kami untuk pertanyaan, konsultasi, atau kerjasama." },
+      ]
+    },
+    {
+      id: 2,
+      title: "Tentang Kami",
+      href: "/about",
+      icon: Leaf,
+      children: [
+        { id: 6, title: "Cerita Kita", href: "/about/#cerita", description: "Simak perjalanan dan sejarah perkembangan perusahaan dari awal hingga kini." },
+        { id: 7, title: "Struktur ", href: "/about/#struktur", description: "Lihat susunan organisasi dan tim manajemen yang memimpin perusahaan." },
+        { id: 8, title: "Mitra", href: "/about/#partner", description: "Daftar mitra strategis yang bekerjasama membangun kesuksesan bersama." },
+      ]
+    },
+    {
+      id: 3,
+      title: "Produk",
+      href: "/produk",
+      icon: Sparkles,
+      children: [
+        { id: 9, title: "Produk ", href: "/produk/#produk-section", description: "Katalog lengkap produk unggulan dengan spesifikasi dan detailnya." },
+      ]
+    },
+    {
+      id: 4,
+      title: "Berita",
+      href: "/berita",
+      icon: Sparkles,
+      children: [
+        { id: 10, title: "Berita", href: "/berita/#berita", description: "Update terkini mengenai aktivitas, acara, dan pengumuman perusahaan." },
+      ]
+    },
+    {
+      id: 5,
+      title: "Pencapaian",
+      href: "/milestone",
+      icon: Sparkles,
+      children: [
+        { id: 11, title: "2017", href: "/milestone/#2017", description: "Tonggak sejarah dan pencapaian penting kami di tahun 2017." },
+        { id: 12, title: "2019", href: "/milestone/#2019", description: "Inovasi dan ekspansi yang berhasil kami raih sepanjang tahun 2019." },
+        { id: 13, title: "2021", href: "/milestone/#2021", description: "Prestasi dan penghargaan yang kami terima pada tahun 2021." },
+      ]
+    },
+    {
+      id: 6,
+      title: "Ruang Lingkup",
+      href: "/ruang-lingkup",
+      icon: Sparkles,
+      children: [
+        { id: 14, title: "Hulu Dan Hilir", href: "/ruang-lingkup/#huluhilir", description: "Integrasi operasional dari sektor hulu hingga hilir." },
+        { id: 15, title: "Energi", href: "/ruang-lingkup/#energi", description: "Solusi energi berkelanjutan dan ramah lingkungan." },
+        { id: 16, title: "Jasa Penunjang", href: "/ruang-lingkup/#jasapenunjang", description: "Layanan pendukung untuk memastikan kelancaran operasional." },
+      ]
+    },
   ];
 
   return (
@@ -104,43 +142,64 @@ export default function SubNavbar() {
         )}
       </Link>
 
-      {/* CENTER: Navigation (Desktop) with Dropdown */}
+
+
+       {/* CENTER: Navigation (Desktop) with Dropdown */}
       <div className="hidden lg:flex">
-        <NavigationMenu>
-          <NavigationMenuList className="gap-2">
+        <NavigationMenu viewport={false}>
+          <NavigationMenuList>
             {navItems.map((item) => {
-              // Check if this item has children
-              const children = Navchild.filter((child) => child.idParent === item.id);
-              const hasChildren = children.length > 0;
+              const hasChildren = item.children && item.children.length > 0;
+              const childCount = item.children ? item.children.length : 0;
+              
+              // Dynamic sizing based on child count
+              let gridClass = "grid gap-3 p-4 ";
+              let numCols = 1;
+              if (childCount > 4) {
+                 gridClass += "w-[600px] grid-cols-2";
+                 numCols = 2;
+              } else if (childCount > 1) {
+                 gridClass += "w-[400px] grid-cols-1"; 
+              } else {
+                 gridClass += "w-[300px] grid-cols-1";
+              }
+
+              const totalRows = Math.ceil(childCount / numCols);
 
               return (
                 <NavigationMenuItem key={item.id}>
                   {hasChildren ? (
                     <>
-                      {/* Using Trigger for items with dropdowns */}
-                      <NavigationMenuTrigger
-                        className="bg-transparent text-lg font-normal hover:!text-secondary hover:!bg-transparent focus:!bg-transparent data-[active]:!bg-transparent data-[state=open]:!bg-transparent data-[state=open]:!text-secondary"
-                      // asChild
+                      <NavigationMenuTrigger 
+                        className={cn(
+                          navigationMenuTriggerStyle(),
+                           "bg-transparent text-lg font-normal hover:!text-secondary hover:!bg-transparent focus:!bg-transparent data-[active]:!bg-transparent data-[state=open]:!bg-transparent data-[state=open]:!text-secondary"
+                        )}
                       >
-                        <Link href={item.href}>
+                       <Link href={item.href}>
                           {item.title}
                         </Link>
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
-                        <ul className="grid w-[400px] gap-3 p-4 md:w-[300px] lg:w-[400px] bg-white rounded-md shadow-md">
-                          {children.map((child) => (
+                        <ul className={gridClass}>
+                          {item.children?.map((child, index) => {
+                            const currentRow = Math.floor(index / numCols);
+                            const isLastRow = currentRow === totalRows - 1;
+                            
+                            return (
                             <ListItem
                               key={child.id}
                               title={child.title}
                               href={child.href}
-                              icon={child.icon}
-                            />
-                          ))}
+                              className={!isLastRow ? "border-b border-black/10 pb-3" : ""}
+                            >
+                              {child.description}
+                            </ListItem>
+                          )})}
                         </ul>
                       </NavigationMenuContent>
                     </>
                   ) : (
-                    /* Standard Link for items without dropdowns */
                     <Link href={item.href} legacyBehavior passHref>
                       <NavigationMenuLink
                         className={cn(
@@ -159,14 +218,6 @@ export default function SubNavbar() {
         </NavigationMenu>
       </div>
 
-      {/* RIGHT: Action Buttons (Desktop) */}
-      <div className="hidden lg:flex items-center gap-2">
-        <Button className="bg-secondary text-white font-semibold hover:bg-primary rounded-full">
-          Hubungi Kami
-          <ArrowRight className="w-4 h-4 ml-2" />
-        </Button>
-      </div>
-
       {/* MOBILE: Hamburger Menu (includes tablets) */}
       <div className="lg:hidden">
         <Sheet>
@@ -180,7 +231,7 @@ export default function SubNavbar() {
             <nav className="flex flex-col mt-8">
               <Accordion type="multiple" className="w-full">
                 {navItems.map((item) => {
-                  const children = Navchild.filter((child) => child.idParent === item.id);
+                  const children = item.children || [];
                   const hasChildren = children.length > 0;
 
                   if (hasChildren) {
@@ -232,30 +283,41 @@ export default function SubNavbar() {
           </SheetContent>
         </Sheet>
       </div>
+
+      {/* RIGHT: Action Buttons (Desktop) */}
+      <div className="hidden lg:flex items-center gap-2">
+        <Button className="bg-secondary text-white font-semibold hover:bg-primary rounded-full">
+          Hubungi Kami
+          <ArrowRight className="w-4 h-4 ml-2" />
+        </Button>
+      </div>
     </header>
   );
 }
 
-// Helper component for the dropdown list items
-const ListItem = ({ className, title, href, icon: Icon, ...props }: any) => {
+const ListItem = React.forwardRef<
+  React.ElementRef<"a">,
+  React.ComponentPropsWithoutRef<"a">
+>(({ className, title, children, ...props }, ref) => {
   return (
     <li>
-      <Link href={href} legacyBehavior passHref>
-        <NavigationMenuLink asChild>
-          <a
-            className={cn(
-              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-              className
-            )}
-            {...props}
-          >
-            <div className="flex items-center gap-2 text-sm font-medium leading-none">
-              {Icon && <Icon className="w-4 h-4 text-secondary" />}
-              {title}
-            </div>
-          </a>
-        </NavigationMenuLink>
-      </Link>
+      <NavigationMenuLink asChild>
+        <a
+          ref={ref}
+          className={cn(
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            className
+          )}
+          {...props}
+        >
+          <div className="text-sm font-medium leading-none">{title}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+            {children}
+          </p>
+        </a>
+      </NavigationMenuLink>
     </li>
-  );
-};
+  )
+})
+ListItem.displayName = "ListItem"
+
