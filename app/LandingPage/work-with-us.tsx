@@ -16,7 +16,7 @@ export default function WorkWithUs() {
               TENTANG KAMI
             </span>
 
-            <h2 className="text-4xl font-bold text-gray-900 mt-4">
+            <h2 className="text-4xl font-bold text-primary mt-4">
               Tertarik Bekerja sama dengan PT Rembang Migas? Hubungi Kami
             </h2>
             <Button

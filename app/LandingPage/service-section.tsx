@@ -13,7 +13,7 @@ const servicesData: ServiceItemData[] = [
     thumbnail: "/hulu-hilir-migas.jpg", // Gambar Kartu Depan
     content: {
       overview: {
-        label: "Overview",
+        label: "Ringkasan",
         image: "/max.jpg", // Gambar Header Modal (Tab 1)
         text: "Solusi panel surya atap untuk hunian modern yang hemat energi dan ramah lingkungan.",
         points: [
@@ -102,7 +102,7 @@ export default function AdvancedServiceSection() {
           <span className="inline-block bg-secondary/10 text-secondary text-sm font-semibold px-4 py-1 rounded-full">
             RUANG LINGKUP
           </span>
-          <h2 className="text-4xl font-bold text-gray-900 mt-4">
+          <h2 className="text-4xl font-bold text-primary mt-4">
             Our Solar Solutions
           </h2>
         </div>

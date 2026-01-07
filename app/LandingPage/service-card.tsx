@@ -79,7 +79,7 @@ function ServiceModalContent({ item }: { item: ServiceItemData }) {
                 value="overview"
                 className="rounded-none border-b-2 border-transparent px-0 py-2 font-semibold text-gray-500 data-[state=active]:border-secondary data-[state=active]:text-secondary bg-transparent focus-visible:ring-0 focus-visible:outline-none"
               >
-                Overview
+                Ringkasan
               </TabsTrigger>
               {/* <TabsTrigger
                 value="details"

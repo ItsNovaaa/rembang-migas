@@ -55,12 +55,12 @@ export default function BenefitsSection() {
             <span className="inline-block bg-secondary/10 text-secondary text-sm font-semibold px-4 py-1 rounded-full">
               MANFAAT
             </span>
-            <h2 className="text-4xl font-bold text-gray-900 mt-4">
+            <h2 className="text-4xl font-bold text-primary mt-4">
               Kemudahan Bekerja Bersama Kami
             </h2>
           </div>
           {/* Kolom Kanan */}
-          <p className="text-gray-600 text-lg max-w-md md:mt-2">
+          <p className="text-primary text-lg max-w-md md:mt-2">
             Kami percaya pada kekuatan energi surya untuk mengubah kehidupan dan
             komunitas.
           </p>
