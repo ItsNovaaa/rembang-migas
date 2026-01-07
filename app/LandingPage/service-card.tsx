@@ -36,7 +36,9 @@ export type ServiceItemData = {
 
 // --- 2. KONTEN MODAL (Logika Ganti Gambar & Tab) ---
 function ServiceModalContent({ item }: { item: ServiceItemData }) {
-  const [activeTab, setActiveTab] = useState<"overview" | "details">("overview");
+  const [activeTab, setActiveTab] = useState<"overview" | "details">(
+    "overview"
+  );
   const currentData = item.content[activeTab];
 
   return (
@@ -90,12 +92,22 @@ function ServiceModalContent({ item }: { item: ServiceItemData }) {
 
           {/* ISI KONTEN (SCROLLABLE) */}
           <ScrollArea className="flex-1 p-6 md:p-8 h-[350px]">
-            <TabsContent value="overview" className="mt-0 animate-in slide-in-from-left-4 duration-300">
-              <h3 className="text-xl font-bold text-slate-900 mb-4">{item.content.overview.label}</h3>
-              <p className="text-slate-600 leading-relaxed mb-6">{item.content.overview.text}</p>
+            <TabsContent
+              value="overview"
+              className="mt-0 animate-in slide-in-from-left-4 duration-300"
+            >
+              <h3 className="text-xl font-bold text-slate-900 mb-4">
+                {item.content.overview.label}
+              </h3>
+              <p className="text-slate-600 leading-relaxed mb-6">
+                {item.content.overview.text}
+              </p>
               <ul className="space-y-3">
                 {item.content.overview.points.map((point, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-slate-700">
+                  <li
+                    key={idx}
+                    className="flex items-start gap-3 text-slate-700"
+                  >
                     <CheckCircle2 className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
                     {point}
                   </li>
@@ -103,12 +115,21 @@ function ServiceModalContent({ item }: { item: ServiceItemData }) {
               </ul>
             </TabsContent>
 
-            <TabsContent value="details" className="mt-0 animate-in slide-in-from-right-4 duration-300">
-              <h3 className="text-xl font-bold text-slate-900 mb-4">{item.content.details.label}</h3>
-              <p className="text-slate-600 leading-relaxed mb-6">{item.content.details.text}</p>
+            <TabsContent
+              value="details"
+              className="mt-0 animate-in slide-in-from-right-4 duration-300"
+            >
+              <h3 className="text-xl font-bold text-slate-900 mb-4">
+                {item.content.details.label}
+              </h3>
+              <p className="text-slate-600 leading-relaxed mb-6">
+                {item.content.details.text}
+              </p>
               <div className="grid gap-3 pl-4 border-l-2 border-gray-200">
                 {item.content.details.points.map((point, idx) => (
-                  <p key={idx} className="text-slate-700 font-medium">• {point}</p>
+                  <p key={idx} className="text-slate-700 font-medium">
+                    • {point}
+                  </p>
                 ))}
               </div>
             </TabsContent>
@@ -120,7 +141,11 @@ function ServiceModalContent({ item }: { item: ServiceItemData }) {
 }
 
 // --- 3. KOMPONEN KARTU UTAMA ---
-export default function AdvancedServiceCard({ item }: { item: ServiceItemData }) {
+export default function AdvancedServiceCard({
+  item,
+}: {
+  item: ServiceItemData;
+}) {
   return (
     <Dialog>
       {/* TRIGGER: KARTU */}
@@ -139,38 +164,36 @@ export default function AdvancedServiceCard({ item }: { item: ServiceItemData })
               className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
             />
           </div>
-
           {/* 2. Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-
           {/* 3. Konten Teks */}
           <div className="absolute inset-0 flex flex-col justify-between p-8 pb-6 pr-6">
             <h3 className="text-white text-3xl font-semibold tracking-wide text-shadow-md">
               {item.title}
             </h3>
           </div>
-
           {/* 4. Tombol Sudut (Styling) */}
           <div
             className="absolute bottom-0 right-0 w-24 h-22 bg-[#f2fcfc] z-10 rounded-tl-[3.5rem] flex items-center justify-center
-                       before:content-[''] before:absolute before:-top-12 before:right-0
-                       before:w-11 before:h-14 
-                       before:bg-[radial-gradient(circle_at_0_0,_transparent_3rem,_white_3rem)]
-                       after:content-[''] after:absolute after:bottom-0 after:-left-12
-                       after:w-17 after:h-10
-                       after:bg-[radial-gradient(circle_at_0%_0%,_transparent_3rem,_white_3rem)]"
+             before:content-[''] before:absolute before:-top-12 before:right-0
+             before:w-11 before:h-14 
+             before:bg-[radial-gradient(circle_at_0_0,transparent_3rem,#f2fcfc_3rem)]
+             
+             after:content-[''] after:absolute after:bottom-0 after:-left-12
+             after:w-17 after:h-10
+             after:bg-[radial-gradient(circle_at_0%_0%,transparent_3rem,#f2fcfc_3rem)]"
           >
             {/* PENTING: Gunakan DIV di sini, bukan BUTTON, agar tidak error nested button */}
             <div
               className="bg-secondary hover:bg-primary text-white rounded-full w-12 h-12
-                         flex items-center justify-center
-                         shadow-lg shadow-secondary/30 hover:shadow-xl hover:shadow-primary/40
-                         transition-all duration-300 ease-in-out z-20 relative
-                         group-hover:scale-105 active:scale-95"
+               flex items-center justify-center
+               shadow-lg shadow-secondary/30 hover:shadow-xl hover:shadow-primary/40
+               transition-all duration-300 ease-in-out z-20 relative
+               group-hover:scale-105 active:scale-95"
             >
               <ArrowUpRight className="w-5 h-5 stroke-[2.5]" />
             </div>
-          </div>
+          </div>{" "}
         </div>
       </DialogTrigger>
 
