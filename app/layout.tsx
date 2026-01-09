@@ -11,7 +11,7 @@ const rubik = Rubik({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Rembang Migas Energi",
   description: "Solusi Mineral dan Energi",
-  generator: "v0.app",
+  // generator: "v0.app",
 }
 
 export default function RootLayout({
